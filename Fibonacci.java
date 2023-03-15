@@ -2,8 +2,7 @@ package Java;
 
 public class fibonacci {
     public static void main(String[] args) {
-      int result = fibo(12);
-      System.out.println(result);
+    fibo(10);
     }
     public static int fibo(int n) {
         int i = 0;
