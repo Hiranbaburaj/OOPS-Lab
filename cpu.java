@@ -1,5 +1,3 @@
-package java;
-
 public class cpu {
     double price;
     public cpu(double p){
@@ -25,9 +23,6 @@ public class cpu {
             mnfr = mnf;
         }        
     }
-    /*public void disp(){
-       
-    }*/
 }
 
 
@@ -37,10 +32,11 @@ class Main {
         cpu dell = new cpu(345789.13);
         cpu.processor intel = dell.new processor(4, "Intel");
         cpu.ram crucial = new cpu.ram(8 , "Crucial");
-        System.out.println("Price: " + cpu.price);
-        System.out.println("Processor Manufacturer: " + processor.manuf);
-        System.out.println("No. of cores: " + processor.core);
-        System.out.println("RAM Manufacturer: " + ram.mnfr);
-        System.out.println("Memory: " + ram.memory); 
+        System.out.println("Price:  " + dell.price);
+        System.out.println("Processor Manufacturer: " + intel.manuf);
+        System.out.println("No. of cores:   " + intel.core);
+        System.out.println("RAM Manufacturer:   " + crucial.mnfr);
+        System.out.println("Memory: " + crucial.memory); 
+
     }
 }
