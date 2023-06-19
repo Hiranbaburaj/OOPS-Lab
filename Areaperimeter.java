@@ -7,39 +7,33 @@ interface perarea
 
 class Circle implements perarea {
 
+    double radius;
+    public Circle(double ra){
+        radius = ra;
+    }
+
     public void perimeter() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Radius: ");
-        double radius = sc.nextDouble();
         double p = 2*3.14*radius;
         System.out.println("The Circumference of circle " + p);
     }
     public void area(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Radius: ");
-        double radius = sc.nextDouble();
         double a = 3.14*radius*radius;
         System.out.println("The area of circle " + a);
     }
 }
 
 class Rectangle implements perarea {
+
+    int length,width;
+    public Rectangle(int le, int wi){
+        length = le;
+        width = wi;
+    }
     public void perimeter() {
-        
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Length: ");
-        int length = sc.nextInt();        
-        System.out.println("Enter The Width: ");
-        int width = sc.nextInt();
         int p = 2*(length+width);
         System.out.println("The perimeter of rectangle " + p);
     }
-    public void area(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Length: ");
-        int length = sc.nextInt();        
-        System.out.println("Enter The Width: ");
-        int width = sc.nextInt();        
+    public void area(){   
         int a = length*width;
         System.out.println("The area of rectangle " + a);
     }
@@ -60,13 +54,19 @@ do{
 
         switch(choice){
             case 1: 
-            perarea c= new Circle(); 
+            System.out.println("Enter The Radius: ");
+            double radius = sc.nextDouble();
+            perarea c= new Circle(radius); 
             c.perimeter();
             c.area();
             break;
 
             case 2: 
-            perarea r= new Rectangle(); 
+            System.out.println("Enter The Length: ");
+            int length = sc.nextInt();        
+            System.out.println("Enter The Width: ");
+            int width = sc.nextInt(); 
+            perarea r= new Rectangle(length,width); 
             r.perimeter();
             r.area();
             break;
